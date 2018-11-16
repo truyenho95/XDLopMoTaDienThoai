@@ -56,3 +56,7 @@ label {
 input#nokiaCreateTitleMessInput, input#iPhoneCreateTitleMessInput{
   margin-bottom: 20px;
 }
+
+hr {
+  margin: 10px 0;
+}
