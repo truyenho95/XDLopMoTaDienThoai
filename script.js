@@ -1,5 +1,5 @@
-let nokia = new Mobile('nokia','0886948987');
-let iPhone = new Mobile('iPhone','113');
+const nokia = new Mobile('nokia','0886948987');
+const iPhone = new Mobile('iPhone','113');
 let listPhoneObj = [nokia, iPhone];
 
 window.onload = () => {

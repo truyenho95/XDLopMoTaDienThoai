@@ -1,6 +1,6 @@
 function Battery(namePhone, namePhoneObj) {
   const mucDoChaiPin = 0; // 0 là mức chai cao nhất (tức là pin có thể vứt đi được rồi) - ngược lại càng cao thì càng tốt
-  this.batteryLevel = 10;
+  this.batteryLevel = 1;
   this.usingLevel = mucDoChaiPin;
 
   this.showBattery = () => {
@@ -19,12 +19,7 @@ function Battery(namePhone, namePhoneObj) {
     }
     if (this.batteryLevel == 0) {
       namePhoneObj.isTurnOn = false;
-      const rowCreateMessengeSelector = document.querySelectorAll(`div#${namePhone} table tr.createMessenge`).forEach(item => {
-        item.style.display = 'none';
-      });
-      const rowMessBoxSelector = document.querySelectorAll(`div#${namePhone} table tr.messBox`).forEach(item => {
-        item.style.display = 'none';
-      });
+      namePhoneObj.turnOff();
     }
     this.showBattery();
     namePhoneObj.showTurnOnStatus();
